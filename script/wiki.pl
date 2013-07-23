@@ -12,8 +12,8 @@
 #      VERSION: 0.1.1-6alfa
 #      CREATED: 01.07.2013 15:45:20
 #===============================================================================
-use SAN::Config;
-use SAN::WEB;
+use Wiki::Config;
+use Wiki::WEB;
 
 # Load configuration
 my $config_file = "/etc/website/config.ini";
@@ -24,12 +24,12 @@ die <<"ERR"
     in wiki.pl file
 ERR
     if (!(-e $config_file));
-my $Config = SAN::Config->new();
+my $Config = Wiki::Config->new();
 my ($dir, $git_dir, $out_dir, $template_file) = $Config->config("$config_file");
 
 # print "TEMP: $template_file\nDIR: $dir\nGIT_DIR: $git_dir\nOUT_DIR: $out_dir\n"; # Debug
 
-my $WEB = SAN::WEB->new();
+my $WEB = Wiki::WEB->new();
 
 # Check site updates on github.
 my $git_stat = $WEB->check_git($git_dir);

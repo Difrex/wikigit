@@ -1,4 +1,4 @@
-package SAN::Config;
+package Wiki::Config;
 
 use Config::Tiny;
 

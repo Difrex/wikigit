@@ -1,4 +1,4 @@
-package SAN::WEB;
+package Wiki::WEB;
 
 use strict;
 use warnings;
@@ -60,7 +60,7 @@ sub process_files() {
             # Here is where we recurse.
             # This makes a new call to process_files()
             # using a new directory we just found.
-            SAN::WEB->process_files($_, $git_dir, $out_dir, $template_file);
+            Wiki::WEB->process_files($_, $git_dir, $out_dir, $template_file);
         } else {
             if ($_ =~ /.+\/(.+)\.wiki$/) {
                 my $file = $_;
@@ -69,7 +69,7 @@ sub process_files() {
 
                 # Load template
                 if (defined($template_file)) {
-                    $tmplt = SAN::WEB->load_template($template_file);
+                    $tmplt = Wiki::WEB->load_template($template_file);
                 }
 
                 # Parsing markup files

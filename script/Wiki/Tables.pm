@@ -1,4 +1,4 @@
-package SAN::Tables;
+package Wiki::Tables;
 
 sub new() {
     my $class = shift;
