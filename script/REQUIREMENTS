@@ -1,0 +1,17 @@
+Required Perl modules:
+
+Text::Markup,
+Git::Repository,
+Config::Tiny
+
+HTTP::Server::Brick if you are want to run test web server
+
+Install from cpan:
+
+	localhost@localdomain # cpan
+	cpan shell -- CPAN exploration and modules installation (v1.9800)
+	Enter 'h' for help.
+
+	cpan[1]> notest force install MODULE::NAME
+
+Try find it in repository in you distributive. 
